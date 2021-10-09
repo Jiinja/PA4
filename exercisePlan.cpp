@@ -62,7 +62,7 @@ std::ostream& operator<< (std::ostream& lhs, const ExercisePlan& plan)
 	return lhs;
 }
 
-std::istream& operator>> (std::istream& infile, ExercisePlan& plan)
+std::fstream& operator>> (std::fstream& infile, ExercisePlan& plan)
 {
 	string grabber = "";
 	getline(infile, grabber);

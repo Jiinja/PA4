@@ -29,5 +29,5 @@ private:
 };
 
 std::ostream& operator<< (std::ostream& lhs, const ExercisePlan& plan);
-std::istream& operator>> (std::istream& infile, ExercisePlan& plan);
+std::fstream& operator>> (std::fstream& infile, ExercisePlan& plan);
 std::fstream& operator<< (std::fstream& outfile, ExercisePlan& plan);

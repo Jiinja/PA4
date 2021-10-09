@@ -57,7 +57,7 @@ std::ostream& operator<< (std::ostream& lhs, const DietPlan& plan) //basically t
 	return lhs;
 }
 
-std::istream& operator>>(std::istream& infile, DietPlan& plan)
+std::fstream& operator>>(std::fstream& infile, DietPlan& plan)
 {
 	string grabber = "";
 	getline(infile, grabber); //grabbing the name

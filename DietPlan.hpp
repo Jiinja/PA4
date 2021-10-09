@@ -21,5 +21,5 @@ private:
 };
 
 std::ostream& operator<< (std::ostream& lhs, const DietPlan& plan);
-std::istream& operator>>(std::istream& infile, DietPlan& plan);
+std::fstream& operator>>(std::fstream& infile, DietPlan& plan);
 std::fstream& operator<< (std::fstream& outfile, DietPlan& plan);
