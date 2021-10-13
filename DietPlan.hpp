@@ -1,3 +1,12 @@
+/*****************************************************************************************
+* Programmer: Josh Maloy                                                                 *
+* Class: CptS 122, Fall 2021; Lab Section 1                                              *
+* Programming Assignment: PA4                                                            *
+* Date: October 13, 2021                                                                 *
+* Description: this program contains all necessary method definitions for the            *
+* dietPlan object to function as intended.										     *
+******************************************************************************************/
+
 #include "ExercisePlan.hpp"
 
 class DietPlan

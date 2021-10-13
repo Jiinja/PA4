@@ -1,3 +1,12 @@
+/*****************************************************************************************
+* Programmer: Josh Maloy                                                                 *
+* Class: CptS 122, Fall 2021; Lab Section 1                                              *
+* Programming Assignment: PA4                                                            *
+* Date: October 13, 2021                                                                 *
+* Description: this program contains all necessary methods for the fitness app to        *
+* function as intended.																     *
+******************************************************************************************/
+
 #include "FitnessApp.h"
 #include <Windows.h>
 
@@ -5,6 +14,8 @@
 
 void FitnessAppWrapper::runApp()
 {
+	fstream dietFile;
+	fstream exerciseFile;
 	int userChoice = 0;
 	string userChoiceGrabber = "";
 	ExercisePlan weeklyExercise[7];
@@ -27,7 +38,7 @@ void FitnessAppWrapper::runApp()
 		switch(userChoice){
 		case 1: //load weekly diet plan
 		{
-			fstream dietFile;
+			//fstream dietFile;
 			dietFile.open("diet.txt", std::ios::in);
 			loadWeeklyPlan(dietFile, weeklyDiet);
 			dietFile.close();
@@ -37,7 +48,7 @@ void FitnessAppWrapper::runApp()
 			break;
 		case 2: //load weekly exercise plan
 		{
-			fstream exerciseFile;
+			//fstream exerciseFile;
 			exerciseFile.open("exercise.txt", std::ios::in);
 			loadWeeklyPlan(exerciseFile, weeklyExercise);
 			exerciseFile.close();
@@ -47,7 +58,7 @@ void FitnessAppWrapper::runApp()
 			break;
 		case 3: //store weekly diet plan
 		{
-			fstream dietFile;
+			//fstream dietFile;
 			dietFile.open("diet.txt", std::ios::out);
 			storeWeeklyPlan(dietFile, weeklyDiet);
 			dietFile.close();
@@ -57,7 +68,7 @@ void FitnessAppWrapper::runApp()
 			break;
 		case 4: //store weekly exercise plan
 		{
-			fstream exerciseFile;
+			//fstream exerciseFile;
 			exerciseFile.open("exercise.txt", std::ios::out);
 			storeWeeklyPlan(exerciseFile, weeklyExercise);
 			exerciseFile.close();
@@ -107,11 +118,11 @@ void FitnessAppWrapper::runApp()
 			break; 
 		}
 	} while (userChoice != 9);
-	fstream exerciseFile;		//Storing exercisePlan
+	//fstream exerciseFile;		//Storing exercisePlan
 	exerciseFile.open("exercise.txt", std::ios::out);
 	storeWeeklyPlan(exerciseFile, weeklyExercise);
 	exerciseFile.close();
-	fstream dietFile;			//Storing dietPlan
+	//fstream dietFile;			//Storing dietPlan
 	dietFile.open("diet.txt", std::ios::out);
 	storeWeeklyPlan(dietFile, weeklyDiet);
 	dietFile.close();

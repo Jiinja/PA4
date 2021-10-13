@@ -1,9 +1,19 @@
+/*****************************************************************************************
+* Programmer: Josh Maloy                                                                 *
+* Class: CptS 122, Fall 2021; Lab Section 1                                              *
+* Programming Assignment: PA4                                                            *
+* Date: October 13, 2021                                                                 *
+* Description: this program contains all necessary method definitions for the fitnessapp *
+* to function as intended.	NOTE: its .h because VS is trash and im scared to change it  *
+******************************************************************************************/
+
 #include "DietPlan.hpp"
 
 class FitnessAppWrapper
 {
 public:
 	void runApp();
+private:
 	void loadDailyPlan(fstream& fileStream, DietPlan& plan);
 	void loadDailyPlan(fstream& fileStream, ExercisePlan& plan);
 	void loadWeeklyPlan(fstream& fileStream, DietPlan weeklyPlan[]);
@@ -17,10 +27,9 @@ public:
 	void storeWeeklyPlan(fstream& fileStream, DietPlan weeklyPlan[]);
 	void storeWeeklyPlan(fstream& fileStream, ExercisePlan weeklyPlan[]);
 	void displayMenu();
-	void exit();
 	void editPlan(ExercisePlan& plan);
 	void editPlan(DietPlan& plan);
-private:
+
 
 };
 
